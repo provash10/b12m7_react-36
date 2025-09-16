@@ -1,0 +1,40 @@
+36-5 Prop types and how to pass/read a prop
+----------------------------------------------
+import './App.css'
+
+function App() {
+  return (
+    <>
+      <h1>Vite + React</h1>
+      <Player name="Dani" club="Barca"></Player>
+      <Player name="Messi" club="Miami"></Player>
+      <Player name="Rolando" club="Al Naser"></Player>
+      <Salami event="Roja Eid" amount ="1000"></Salami>
+      <Salami event="Graduation" amount ="2000"></Salami>
+
+    </>
+  )
+}
+
+// const{name, club} = {name:"Dani", club:"Barca"}
+function Player({name, club}){
+  console.log(Player)
+  return(
+    <div className="student">
+      <h3>Name :{name} </h3>
+      <p>Club : {club} </p>
+    </div>
+  )
+}
+
+function Salami({event, amount}){
+  console.log(event, amount)
+  return(
+    <div className='student'>
+      <p>Salami For : {event} </p>
+      <p>Amount : {amount}</p>
+    </div>
+  )
+}
+
+export default App

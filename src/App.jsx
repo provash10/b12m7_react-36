@@ -1,25 +1,20 @@
-import './App.css'
+import Library from './Library';
+import './App.css';
 
 function App() {
+  const books = [
+    { id: 1, name: 'Physics', price: 250 },
+    { id: 2, name: 'Chemistry', price: 300 },
+    { id: 3, name: 'Higher Math', price: 150 },
+    { id: 4, name: 'Biology', price: 350 },
+  ];
+
   return (
     <>
       <h1>Vite + React</h1>
-      <Player name="Dani" club="Barca"></Player>
-      <Player name="Messi" club="Miami"></Player>
-      <Player name="Rolando" club="Al Naser"></Player>
-
+      <Library>books={books}</Library>
     </>
-  )
+  );
 }
 
-// const{name, club} = {name:"Dani", club:"Barca"}
-function Player({name, club}){
-  return(
-    <div className="student">
-      <h3>Name :{name} </h3>
-      <p>Club : {club} </p>
-    </div>
-  )
-}
-
-export default App
+export default App;

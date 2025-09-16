@@ -1,0 +1,47 @@
+36-6 Read only props Two ways of conditional rendering
+----------------------------------------------------------
+app.jsx
+
+import ToDo from '../Todo'
+import './App.css'
+
+function App() {
+
+  const time = 50;
+  return (
+    <>
+      <h1>Vite + React</h1>
+      <ToDo task ="Learn React" isDone ={true} time={time}></ToDo>
+      <ToDo task ="Revise JS" isDone ={false}></ToDo>
+      <ToDo task ="Eat Now" isDone ={false}></ToDo>
+      <ToDo task ="Rest" isDone ={true}></ToDo>
+    </>
+  )
+}
+
+
+export default App
+
+
+Todo.jsx
+
+// export default function ToDo(){
+//     return(
+//         <li>Task :</li>
+//     )
+// }
+
+// export default function ToDo({task,isDone}){
+//     return(
+//         <li>Task : {task}</li>
+//     )
+// }
+export default function ToDo({task,isDone, time=0}){
+    if(isDone === true){
+        return <li>Done: {task} duration: {time}</li>
+    }
+    else{
+        return <li>Do Now: {task}</li>
+    }
+    
+}

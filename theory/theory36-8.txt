@@ -1,0 +1,40 @@
+36-8 (advanced) Rendering lists of users using map
+-------------------------------------------------------
+import Actor from './Actor';
+import Singer from './Singer';
+import './App.css';
+
+function App() {
+const actors = ['Bappa Raj', 'Omar Sunny', 'Salman Shah', 'Jasim', 'Anwar'];
+const singers = [
+    {id: 1, name: 'Dr. Billah', age: 78},
+    {id: 2, name: 'Tahsan', age: 45},
+    {id: 3, name: 'Happy Akond', age: 69},
+]
+return (
+    <>
+      <h1>Vite + React</h1>
+      {/* {
+        actors.map(actor => <Actor actor={actor}></Actor>)
+      } */}
+      {
+        singers.map(singer => <Singer key={singer.id} singer={singer}></Singer>)
+      }
+    </>
+  )
+}
+
+
+export default App
+
+------------Singer.jsx
+import './App.css'
+export default function Singer({ singer }) {
+  console.log(singer)
+  return (
+    <div className='singer'>
+      <h3>Name: {singer.name}</h3>
+      <p>Age: {singer.age}</p>
+    </div>
+  )
+}

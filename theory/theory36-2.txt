@@ -1,0 +1,6 @@
+36-2 What is component, component types, build your first component
+--------------------------------------------------------------------
+google---> vite react --> Getting Started
+https://vite.dev/guide/ 
+
+$ npm create vite@latest my-vue-app -- --template vue
